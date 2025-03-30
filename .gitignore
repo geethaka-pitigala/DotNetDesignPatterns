@@ -1,0 +1,28 @@
+# Ignore everything
+*
+
+# Keep .gitignore
+!.gitignore
+
+# Unignore all folders (so Git can see inside them)
+!*/
+!***/
+
+# Keep all Program.cs files, even deep down
+!**/Program.cs
+
+# Ignore build folders
+bin/
+obj/
+
+# Ignore IDE stuff
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.csproj.user
+
+# Ignore publish output
+publish/
+out/
