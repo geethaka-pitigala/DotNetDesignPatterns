@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using static System.Console;
 
-namespace Builder;
+namespace Builder{
 public class Program{
     public static void Main(string[] args){
         HTMLBuilder hb = new HTMLBuilder("body");
@@ -76,4 +76,6 @@ public class HTMLBuilder{
     {
         return Root.ToString();
     }
+}
+
 }
