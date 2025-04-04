@@ -5,9 +5,7 @@ namespace Builder;
 public class Program{
     public static void Main(string[] args){
         HTMLBuilder hb = new HTMLBuilder("body");
-        hb.AddChild("li");
-        hb.AddChild("li");
-        hb.AddChild("li");
+        hb.AddChild("li").AddChild("li").AddChild("li");
         WriteLine(hb);
 
     }
@@ -57,18 +55,21 @@ public class HTMLBuilder{
         this.Root = new HTMLElement(Name);
     }
 
-    public void AddChild(HTMLElement child){
+    public HTMLBuilder AddChild(HTMLElement child){
         this.Root.children.Add(child);
+        return this;
     }
 
-    public void AddChild(string childName){
+    public HTMLBuilder AddChild(string childName){
         this.AddChild(new HTMLElement(childName));
+        return this;
     }
 
-    public void AddChildren(List<HTMLElement> children){
+    public HTMLBuilder AddChildren(List<HTMLElement> children){
         foreach(var child in children){
             this.AddChild(child);
         }
+            return this;
     }
 
     public override string ToString()
