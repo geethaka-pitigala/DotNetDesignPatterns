@@ -9,7 +9,7 @@
 !***/
 
 # Keep all Program.cs files, even deep down
-!**/Program.cs
+!**.cs
 
 # Ignore build folders
 bin/
