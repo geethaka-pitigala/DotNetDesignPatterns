@@ -1,4 +1,4 @@
-namespace CreationalDesignPatterns.Factory.ProperFactory
+namespace CreationalDesignPatterns.Factory.FactoryMethod
 {
     public class Point{
         public int X { get; set; }
